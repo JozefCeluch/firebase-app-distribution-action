@@ -63,7 +63,7 @@ runs:
       if: ${{ steps.node-version-above-18.conclusion == 'failure' }}
       with:
         node-version: '18.x'
-    - uses: actions/cache@v3
+    - uses: actions/cache@v4
       if: ${{ inputs.cache == 'true' }}
       env: { cache-name: firebase-app-distribution-action }
       with:
